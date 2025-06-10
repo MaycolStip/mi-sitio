@@ -1,4 +1,201 @@
-/* Estilos generales */
+/* ===== Estilo Global Moderno ===== */
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f1f3f5, #dee2e6);
+  color: #212529;
+  margin: 0;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Título Principal */
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* ===== Buscador ===== */
+input[type="search"] {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1.5px solid #bbb;
+  background: #fff;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+input[type="search"]:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.2);
+}
+
+/* ===== Contenedor de Productos ===== */
+#productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 10px;
+}
+
+/* ===== Tarjetas ===== */
+#productsContainer > div {
+  background: #fff;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#productsContainer > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen del Producto */
+#productsContainer img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Texto de Producto */
+#productsContainer h3 {
+  margin: 16px 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+#productsContainer p {
+  font-size: 15px;
+  color: #555;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+/* Precio */
+#productsContainer p:last-child {
+  font-weight: 700;
+  color: #3f51b5;
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  #productsContainer > div {
+    width: 45%;
+  }
+}
+@media (max-width: 500px) {
+  #productsContainer > div {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ===== Botones Generales ===== */
+button {
+  padding: 14px 24px;
+  background: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 16px;
+}
+
+button:hover {
+  background: #2c3a9e;
+}
+
+/* ===== Formulario ===== */
+form#productForm {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+/* Inputs y textareas del formulario */
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.15);
+  outline: none;
+}
+
+
+
+/* Tabla pedidos */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #3f51b5;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
@@ -14,132 +211,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Contenedor del formulario */
-form#productForm {
-  background: white;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  width: 350px;
-}
-
-/* Título */
 h1 {
   text-align: center;
   color: #333;
   margin-bottom: 25px;
   font-weight: 700;
-}
-
-/* Inputs y textarea */
-input[type="text"],
-input[type="number"],
-input[type="file"]{
-  cursor: pointer;
-}
-textarea {
-  width: 100%;
-  padding: 12px 16px;
-  margin-bottom: 20px;
-  border: 1px solid #ced4da;
-  border-radius: 10px;
-  font-size: 15px;
-  background-color: #fff;
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="file"]:focus,
-textarea:focus {
-  border-color: #3f51b5;
-  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.15);
-  outline: none;
-}
-
-/* Botón */
-button {
-  width: 100%;
-  padding: 14px;
-  background: #3f51b5;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 17px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-   margin-bottom: 20px;
-}
-
-/* Hover botón */
-button:hover {
-  background: #2c3a9e;
-}
-/* Contenedor general para los productos */
-#productsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin: 40px auto;
   max-width: 900px;
-}
-
-/* Tarjeta individual de producto */
-#productsContainer > div {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  width: 250px;
-  background: white;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.3s ease;
-  cursor: default;
-}
-
-/* Sombra al pasar mouse */
-#productsContainer > div:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* Imagen en la tarjeta */
-#productsContainer img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
-}
-
-/* Título del producto */
-#productsContainer h3 {
-  margin: 12px 0 8px 0;
-  color: #333;
-  font-weight: 700;
-  text-align: center;
-}
-
-/* Descripción */
-#productsContainer p {
-  color: #555;
-  font-size: 14px;
-  flex-grow: 1;
-  text-align: center;
-}
-
-/* Precio destacado */
-#productsContainer p:last-child {
-  font-weight: 700;
-  margin-top: 12px;
-  color: #3f51b5;
-}
-@media (max-width: 600px) {
-  #productsContainer > div {
-    width: 100%;
-    max-width: 320px;
-  }
 }
