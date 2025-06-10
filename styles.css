@@ -46,8 +46,8 @@ input[type="search"]:focus {
   flex-wrap: wrap;
   gap: 24px;
   justify-content: flex-start;
-  margin: 40px auto;
-  max-width: 1200px;
+  margin: 40px 0;
+  max-width: none;
   padding: 0 10px;
 }
 
