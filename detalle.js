@@ -55,7 +55,7 @@ function pedir() {
   db.collection("orders").add(pedido)
     .then(() => {
       localStorage.setItem('ultimoPedidoExitoso', 'true');
-      window.location.href = 'productos.html'; // Redirige al listado de productos
+      window.location.href = 'index.html'; // Redirige al listado de productos
     })
     .catch(error => {
       alert("Error al guardar el pedido: " + error.message);
