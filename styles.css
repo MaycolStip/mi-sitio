@@ -2,12 +2,12 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f0f2f5;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   min-height: 100vh;
   margin: 0;
   padding: 40px 20px;
+  display: flex;
+  flex-direction: column; /* Cambié flex-direction a column */
+  align-items: center;
 }
 
 /* Contenedor del formulario */
