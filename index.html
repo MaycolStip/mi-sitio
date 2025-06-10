@@ -3,9 +3,9 @@
 <head>
   <title>Lista de productos</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,5 +18,34 @@
   />
   <div id="productsContainer" style="max-width: 900px; margin: auto; display: flex; flex-wrap: wrap; gap: 20px;"></div>
   <script src="productos.js"></script>
+  <div id="toast" style="
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #3f51b5;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  z-index: 1000;
+">Producto pedido con éxito</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const toast = document.getElementById('toast');
+    const pedidoExitoso = localStorage.getItem('ultimoPedidoExitoso');
+    if (pedidoExitoso === 'true') {
+      toast.style.visibility = 'visible';
+      setTimeout(() => {
+        toast.style.visibility = 'hidden';
+        localStorage.removeItem('ultimoPedidoExitoso');
+      }, 3000);
+    }
+  });
+</script>
 </body>
 </html>
