@@ -70,9 +70,3 @@ searchInput.addEventListener("input", (e) => {
   );
   renderProductos(filtrados);
 });
-
-  mostrarProductos(productosFiltrados);
-});
-
-// Cargar productos al iniciar la página
-cargarProductos();
