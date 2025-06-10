@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+/* Contenedor del formulario */
+form#productForm {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Inputs y textarea */
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+/* Cambiar borde al enfocar */
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+/* Botón */
+button {
+  width: 100%;
+  padding: 14px;
+  background: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover botón */
+button:hover {
+  background: #2c3a9e;
+}
+/* Contenedor general para los productos */
+#productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+/* Tarjeta individual de producto */
+#productsContainer > div {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  background: white;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+/* Sombra al pasar mouse */
+#productsContainer > div:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Imagen en la tarjeta */
+#productsContainer img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Título del producto */
+#productsContainer h3 {
+  margin: 12px 0 8px 0;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Descripción */
+#productsContainer p {
+  color: #555;
+  font-size: 14px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Precio destacado */
+#productsContainer p:last-child {
+  font-weight: 700;
+  margin-top: 12px;
+  color: #3f51b5;
+}
