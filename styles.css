@@ -35,10 +35,7 @@ input[type="file"] {
   width: 100%;
   padding: 12px 15px;
   margin-bottom: 18px;
-  border: 1.8px solid #ccc;
-  border-radius: 8px;
   font-size: 15px;
-  transition: border-color 0.3s ease;
   resize: vertical;
   all: unset;
   border-radius: 12px;
